@@ -1,4 +1,4 @@
-// Unit tests for math expression parser
+// Unit tests for the math expression parser
 // @author Stepan Belousov
 #include <cmath>
 #include <cppunit/TestFixture.h>

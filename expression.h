@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-// Main class for math expression
+// Main class for a math expression
 class Expression {
 	static const double pi = M_PI;
 

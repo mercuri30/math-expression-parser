@@ -14,7 +14,7 @@ using namespace std;
 const string Expression::TokenTypeList[] = { "UNDEFINED", "PARENTHESIS", "UNDEFINED_OPERATOR", 
 	"BINARY_OPERATOR", "UNARY_OPERATOR", "VARIABLE", "NUMBER", "FUNCTION" };
 
-// List of supported functions, operators and constants
+// List of supported functions, operators, and constants
 // If you wish to add smth here, don't forget to modify 
 // applyFunction(), applyUnary() or applyBinary() as well
 void Expression::initialize() {
@@ -80,8 +80,8 @@ double Expression::applyBinary(const string& s, double arg1, double arg2) const 
 	return -1;
 }
 
-// Parse variables and it's values from string and fill a map
-// String must has a format like "x = 1 y = 2", etc.
+// Parse variables and their values from the string
+// The string must be in the following format: "x = 1 y = 2"
 void Expression::setVariables(const string& s) {
 	istringstream iss(s);
 	string s1, s2;
@@ -137,7 +137,7 @@ void Expression::markUnaries(vector < Token > &v) const {
 	}
 }
 
-// Split expression string into tokens
+// Split the expression string into tokens
 void Expression::split(const string& s, vector < Token > &result) {
 	initialize();
 	istringstream ss(s);
@@ -173,7 +173,7 @@ void Expression::split(const string& s, vector < Token > &result) {
 	}
 }
 
-// Get token priority for the Reverse Polish Notation
+// Get the token priority for the Reverse Polish notation
 int Expression::priority(const Token& t) const {
 	if (t.s == "(") return 0;
 	if (t.type == FUNCTION) return 5;
@@ -196,7 +196,7 @@ int Expression::priority(const Token& t) const {
 	return -1;
 }
 
-// Convert expression to the Reverse Polish Notation
+// Convert the expression to the Reverse Polish notation
 void Expression::convertExpression(vector < Token > &v, vector < Token > &result) const {
 	markUnaries(v);
 	stack < Token > st;
@@ -325,7 +325,7 @@ double Expression::calculate(const vector < Token > &v) const {
 	return result;
 }
 
-// Check if expression is valid
+// Check if the expression is valid
 void Expression::checkExpression(const vector < Token > &v) const {
 	int n = static_cast<int>(v.size());
 	bool fail = false;
