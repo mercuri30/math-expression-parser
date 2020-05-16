@@ -1,5 +1,6 @@
 // Unit tests for the math expression parser
 // @author Stepan Belousov
+
 #include <cmath>
 #include <cppunit/TestFixture.h>
 #include <cppunit/extensions/HelperMacros.h>

@@ -1,6 +1,8 @@
 // Math expression parser
 // @author Stepan Belousov
+
 #pragma once
+
 #include <cmath>
 #include <cstdio>
 #include <map>
