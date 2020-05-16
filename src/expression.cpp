@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <limits>
 #include <map>
+#include <regex>
 #include <sstream>
 #include <stack>
 #include <string>
@@ -83,7 +84,7 @@ double Expression::applyBinary(const string& s, double arg1, double arg2) const 
 // Parse variables and their values from the string
 // The string must be in the following format: "x = 1 y = 2"
 void Expression::setVariables(const string& s) {
-    istringstream iss(s);
+    istringstream iss(regex_replace(s, regex("="), " = "));
     string s1, s2;
     double val;
     while (iss >> s1) {

@@ -7,6 +7,11 @@ project(math_expression_parser)
 
 include_directories(include)
 
+add_executable(parser
+    src/client.cpp
+    src/expression.cpp
+)
+
 add_executable(parser_test
     src/expression.cpp
     src/unit.cpp
