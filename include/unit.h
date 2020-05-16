@@ -23,7 +23,7 @@ class ExpressionTest: public CppUnit::TestFixture {
     string varsAB, varsABC, varsAXT, varsX, varsConst, varsA, varsB, varsABCD;
     string varsBad1, varsBad2, varsBad3;
 
-    static const double maxAbsError = 1e-5;
+    static constexpr double maxAbsError = 1e-5;
 public:
     void setUp() {
         varsAB = "a = 1 b = 2";

@@ -12,7 +12,7 @@
 
 // Main class for a math expression
 class Expression {
-    static const double pi = M_PI;
+    static constexpr double pi = M_PI;
 
     enum TokenType { UNDEFINED, PARENTHESIS, UNDEFINED_OPERATOR,
     BINARY_OPERATOR, UNARY_OPERATOR, VARIABLE, NUMBER, FUNCTION };
