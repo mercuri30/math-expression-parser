@@ -12,7 +12,7 @@
 class Expression {
 	static const double pi = M_PI;
 
-	enum TokenType { UNDEFINED, PARENTHESIS, UNDEFINED_OPERATOR, 
+	enum TokenType { UNDEFINED, PARENTHESIS, UNDEFINED_OPERATOR,
 	BINARY_OPERATOR, UNARY_OPERATOR, VARIABLE, NUMBER, FUNCTION };
 
 	static const std::string TokenTypeList[];

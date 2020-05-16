@@ -11,11 +11,11 @@
 
 using namespace std;
 
-const string Expression::TokenTypeList[] = { "UNDEFINED", "PARENTHESIS", "UNDEFINED_OPERATOR", 
+const string Expression::TokenTypeList[] = { "UNDEFINED", "PARENTHESIS", "UNDEFINED_OPERATOR",
 	"BINARY_OPERATOR", "UNARY_OPERATOR", "VARIABLE", "NUMBER", "FUNCTION" };
 
 // List of supported functions, operators, and constants
-// If you wish to add smth here, don't forget to modify 
+// If you wish to add smth here, don't forget to modify
 // applyFunction(), applyUnary() or applyBinary() as well
 void Expression::initialize() {
 	functions.insert("sin");
