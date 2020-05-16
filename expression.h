@@ -60,21 +60,21 @@ public:
 class ExpressionWrongFormat : public std::exception {
 public:
 	const char* what() const throw() {
-		return "Неправильный формат ввода выражения";
+		return "Input expression is not in correct format";
 	}
 };
 
 class ExpressionBadResult : public std::exception {
 public:
 	const char* what() const throw() {
-		return "Значение выражения для заданных аргументов не определено либо слишком велико";
+		return "Expression result is either undefined or infinite";
 	}
 };
 
 class ExpressionUnknownVariable : public std::exception {
 	std::string message;
 public:
-	ExpressionUnknownVariable(const std::string& name): message("Неизвестная переменная: " + name) {}
+	ExpressionUnknownVariable(const std::string& name): message("Unknown variable: " + name) {}
 	const char* what() const throw() {
 		return message.c_str();
 	}
